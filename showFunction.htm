@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show Function</title>
+        <meta charset="UTF-8" />
+        <style>
+            body {
+                background-color: green;
+            }
+            #all {
+                width: 50%;
+                color: #fff;
+            }
+            #all button {
+                display: block;
+                margin: auto;
+                margin-top: 10px;
+                width: 150px;
+                height: 30px;
+                background-color: yellow;
+                border: none;
+                outline: none;
+                border-radius: 20px;
+                cursor: pointer;
+                font: 400 1em 'Open Sans', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="all">
+            <div></div>
+            <button onclick="show()">Show More</button>
+        </div>
+        
+
+        <script>
+            let str = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas veniam ipsam doloremque reiciendis excepturi. Aspernatur veniam dolorum expedita quia debitis tempore porro, corrupti quas tenetur minima neque optio perferendis eius.";
+            let div = document.getElementsByTagName("div")[1];
+            let btn = document.getElementsByTagName("button")[0];
+
+            div.innerHTML = str.substring(0, 150) + "...";
+
+           /* function show() {
+                div.innerHTML = str;
+                btn.innerHTML = "Show Less"
+            }*/
+            function show() {
+                if (div.innerHTML == str.substring(0, 150) + "...") {
+                    div.innerHTML = str;
+                    btn.innerHTML = "Show Less";
+                } else {
+                    div.innerHTML = str.substring(0, 150) + "...";
+                    btn.innerHTML = "Show more";
+                }
+            }
+        </script>
+    </body>
+</html>
